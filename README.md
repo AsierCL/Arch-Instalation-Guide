@@ -1,4 +1,4 @@
-# Instalacion de ARCH LINUX
+# Instalación de ARCH LINUX
 
 A continuación se muestran los pasos necesarios para instalar el sistema de Arch Linux en un equipo de forma manual, a la vez que se explica brevemente para que sirve cada paso. 
 
@@ -240,16 +240,38 @@ En este punto, estamos listos para reiniciar el ordenador sin el pendrive con el
 ```
 exit
 umount -R /mnt
-swapoff /dev/vda2
+swapoff /dev/sda2
 reboot now
 ```
-Ya podemos desenchufar en pendrive
+Ya podemos desenchufar el pendrive y arrancar nuestro sistema.
 
-### 8.- Instalacion de paquetes básicos
+
+### 8.- Instalación de paquetes básicos
 
 Al reiniciar, nos logueamos con el usuario root, para seguir instalando paquetes y no necesitar el comando _sudo_.
 
 Procedemos a instalar paquetes que casi al 100% de las veces vamos a necesitar.
 ```
 pacman -Syu
-pacman -S neofetch lsb-release curl wget git xf86-video-fbdev
+pacman -S neofetch lsb-release curl wget git xf86-video-fbdev xf86-video-vesa
+```
+
+### 9.- Instalación del entorno gráfico
+Finalmente ya podríamos instalar un entorno gráfico y tener un dispositivo completamente funcional. Para ello, debemos instalar el entorno gráfico (Desktop enviroment) y su correspondiente administrador de pantalla (Display manager). A veces, instalando el entorno, ya viene su administrador de pantalla.
+
+La función del administrador de pantalla es ofrecer el inicio de sesión, y en caso de un login exitoso, lanzar el entorno gráfico. También gestiona las sesiones y los cambios de usuarios.
+
+Para este tutorial, usaremos el entorno gnome, ya que es sencillo de instalar. Para ello, ejecutamos los siguientes comandos:
+```
+pacman -S gnome
+```
+y aceptamos todo;
+```
+sudo systemctl enable gdm.service
+```
+activamos el administrador de pantalla.
+
+Ahora podemos reiniciar el sistema, y deberíamos tener el entorno listo y funcionando.
+```
+reboot now
+```
