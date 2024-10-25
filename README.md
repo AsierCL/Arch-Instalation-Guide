@@ -58,7 +58,8 @@ Antes de empezar el particionado, debemos conocer como debe ser la estructura de
 
 Para saber el nombre de nuestro disco, simplemente ejecutamos el comando _cfdisk_, y arriba de todo, veremos el nombre del disco de la siguiente forma /dev/NOMBRE. En mi caso, sda.
 
-#### DISCLAIMER. Los cambios hechos en este apartado son irreversibles, debes estar seguro de lo que estas a punto de hacer.
+> [!CAUTION]
+> Los cambios hechos en este apartado son irreversibles, debes estar seguro de lo que estas a punto de hacer.
 
 Si tenemos particiones ya creadas, que será lo habitual, saldremos de _cfdisk_, y ejecutaremos el siguiente comando para eliminarlas:
 ```
@@ -251,6 +252,10 @@ Ya podemos desenchufar el pendrive y arrancar nuestro sistema.
 ### 8.- Instalación de paquetes básicos
 
 Al reiniciar, nos logueamos con el usuario root, para seguir instalando paquetes y no necesitar el comando _sudo_.
+
+Para conectarnos al wifi nuevamente (si no estamos conectados por cable), podemos usar el comando _wifi_ o el comando _nmtui_.
+Esta nos abrirá una interfaz gráfica simple, que nos permitirá conectarnos a la red wifi correspondiente.
+
 
 Procedemos a instalar paquetes que casi al 100% de las veces vamos a necesitar.
 ```
