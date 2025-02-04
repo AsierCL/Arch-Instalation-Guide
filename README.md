@@ -282,3 +282,12 @@ Ahora podemos reiniciar el sistema, y deberíamos tener el entorno listo y funci
 ```
 reboot now
 ```
+
+
+### 10.- Instalación de mi entorno
+
+```
+pacman -S bspwm polybar sxhkd kitty picom dunst rofi keyd feh brightnessctl bluez-utils openssh p7zip pavucontrol playerctl pulseaudio rclone tree usbutils wakeonlan xclip xorg zsh bat lsd
+
+git clone https://github.com/AsierCL/Dotfiles
+```
